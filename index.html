@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calcule juros simples e o valor total de um investimento a partir do capital, da taxa anual e do prazo em anos.">
+    <title>Calculadora de Taxa de Juros Simples</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <h1>Calculadora de Taxa de Juros Simples</h1>
+      <p class="intro">Descubra os juros e o valor final de um investimento.</p>
+
+      <form id="interest-form">
+        <label for="principal">Capital inicial (R$)</label>
+        <input id="principal" name="principal" type="number" min="0.01" step="0.01" value="1000" required>
+
+        <label for="rate">Taxa de juros anual (%)</label>
+        <input id="rate" name="rate" type="number" min="0" step="any" value="5" required>
+
+        <label for="years">Prazo (anos)</label>
+        <input id="years" name="years" type="number" min="0" step="any" value="2" required>
+
+        <button type="submit">Calcular juros</button>
+      </form>
+
+      <section class="result" aria-live="polite" aria-atomic="true">
+        <h2>Resultado</h2>
+        <p id="error" class="error" role="alert" hidden></p>
+        <p>Juros: <strong id="interest-result">—</strong></p>
+        <p>Valor final: <strong id="total-result">—</strong></p>
+      </section>
+    </main>
+  </body>
+</html>
