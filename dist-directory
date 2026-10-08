@@ -1,3 +1,4 @@
+npx webpack
 asset favicon.ico 4.19 KiB [emitted] [from: src/favicon.ico] [copied]
 asset index.html 1.42 KiB [emitted] [from: src/index.html] [copied] [minimized]
 asset main.js 1.21 KiB [emitted] [minimized] (name: main)

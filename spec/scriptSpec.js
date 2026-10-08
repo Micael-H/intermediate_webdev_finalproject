@@ -1,4 +1,4 @@
-const { calculateInterest } = require('../script');
+const { calculateInterest } = require('../src/script');
 
 describe('calculateInterest', () => {
   it('calcula juros simples e total para valores numéricos', () => {

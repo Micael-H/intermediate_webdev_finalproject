@@ -1,8 +1,8 @@
 {
-  "name": "calculadora-taxa-juros",
+  "name": "intermediate_webdev_finalproject",
   "version": "1.0.0",
   "description": "Calculadora de juros simples com testes Jasmine e distribuição Webpack.",
-  "main": "script.js",
+  "main": "src/script.js",
   "scripts": {
     "test": "jasmine",
     "build": "webpack"

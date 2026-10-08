@@ -1,6 +1,8 @@
 # Calculadora de Taxa de Juros Simples
 
-Informe o capital inicial, a taxa anual e o prazo em anos. A calculadora usa a fórmula `juros = capital × taxa × anos ÷ 100` e mostra os juros e o valor final em reais.
+Projeto final com testes Jasmine e distribuição Webpack.
+
+A fórmula usada é juros = capital × taxa anual × prazo em anos ÷ 100. O aplicativo converte as entradas em números e exibe juros e total em reais.
 
 ## Executar
 
@@ -10,15 +12,25 @@ npx jasmine
 npx webpack
 ```
 
-Abra `dist/index.html` após o build. Também é possível abrir `index.html` diretamente durante o desenvolvimento.
+Abra dist/index.html após o build. Para desenvolver sem build, abra src/index.html.
 
-## Evidências para a avaliação
+## Estrutura
 
-- `jasmine-sem-specs.txt`: saída de `npx jasmine` logo após a inicialização, antes de adicionar as especificações.
-- `jasmine-testes.txt`: saída final dos dois testes aprovados.
-- `webpack-build.txt`: saída do build de distribuição.
+- src/index.html: favicon, CSS, JavaScript e SEO (title, meta description e h1).
+- src/script.js: cálculo e referências explícitas aos IDs principal, rate e years.
+- src/style.css: estilos da calculadora.
+- src/favicon.ico: favicon no formato ICO.
+- spec/scriptSpec.js: duas especificações Jasmine.
+- webpack.config.js: gera dist/main.js e copia os demais arquivos para distribuição.
+
+## Evidências para avaliação
+
+- no-spec: registro inicial, antes da criação das especificações, com os comandos npx jasmine init e npx jasmine.
+- both-tests-passed: saída atual de npx jasmine com 2 specs, 0 failures.
+- dist-directory: saída atual de npx webpack com favicon.ico, main.js e ./src/script.js.
+- [SUBMISSAO.md](./SUBMISSAO.md): respostas completas para copiar na avaliação.
 
 ## Arquivos para submissão
 
-- [index.html](https://github.com/Micael-H/calculadora-taxa-juros/blob/main/index.html)
-- [script.js](https://github.com/Micael-H/calculadora-taxa-juros/blob/main/script.js)
+- [index.html](https://github.com/Micael-H/intermediate_webdev_finalproject/blob/main/src/index.html)
+- [script.js](https://github.com/Micael-H/intermediate_webdev_finalproject/blob/main/src/script.js)

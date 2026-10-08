@@ -3,13 +3,23 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './script.js',
+  entry: './src/script.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'script.js',
+    filename: 'main.js',
     clean: true,
   },
   plugins: [
-    new CopyWebpackPlugin({ patterns: ['index.html', 'style.css', 'favicon.svg'] }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/index.html',
+          to: 'index.html',
+          transform: (content) => content.toString().replace('src="./script.js"', 'src="./main.js"'),
+        },
+        { from: 'src/style.css', to: 'style.css' },
+        { from: 'src/favicon.ico', to: 'favicon.ico' },
+      ],
+    }),
   ],
 };

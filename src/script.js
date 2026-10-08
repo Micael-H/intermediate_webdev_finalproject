@@ -14,19 +14,22 @@ function calculateInterest(principalInput, rateInput, yearsInput) {
 
 if (typeof document !== 'undefined') {
   const form = document.getElementById('interest-form');
+  const principalInput = document.getElementById('principal');
+  const rateInput = document.getElementById('rate');
+  const yearsInput = document.getElementById('years');
   const interestResult = document.getElementById('interest-result');
   const totalResult = document.getElementById('total-result');
   const errorMessage = document.getElementById('error');
 
-  if (form && interestResult && totalResult && errorMessage) {
+  if (form && principalInput && rateInput && yearsInput && interestResult && totalResult && errorMessage) {
     const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       try {
         const { interest, total } = calculateInterest(
-          form.elements.principal.value,
-          form.elements.rate.value,
-          form.elements.years.value
+          principalInput.value,
+          rateInput.value,
+          yearsInput.value
         );
         interestResult.textContent = currency.format(interest);
         totalResult.textContent = currency.format(total);
